@@ -2,9 +2,11 @@
   "name": "blog-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon",
+    "start": "ts-node --transpile-only main.ts",
+    "build": "tsc -p ."
   },
   "repository": {
     "type": "git",
@@ -14,8 +16,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^20.5.1",
+    "koa": "^2.14.2",
     "nodemon": "^3.0.1",
+    "reflect-metadata": "^0.1.13",
+    "tracer": "^1.1.6",
     "ts-node": "^10.9.1",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "walk-sync": "^3.0.0"
   }
 }
